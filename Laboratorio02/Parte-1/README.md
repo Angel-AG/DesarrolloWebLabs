@@ -1,4 +1,4 @@
-# Lab 02 - Mi curriculum con más CSS
+# Lab 02: Parte 1 - Mi curriculum con más CSS
 
 ---
 
