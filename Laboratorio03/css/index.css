@@ -3,12 +3,58 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-top: 1em;
 }
 
 .logo > img {
   width: 50px;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  background-color: gray;
+}
+
+.hamburger {
+  padding: 0.5em 1em;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 1em;
+}
+
+.product {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1em;
+  text-align: center;
+}
+
+.social {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
