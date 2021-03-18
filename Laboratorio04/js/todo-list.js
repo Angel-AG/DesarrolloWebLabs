@@ -17,8 +17,9 @@ function createTodoElement(todoEl) {
 
 function addNewTodo() {
   let newTodo = document.getElementById('new-todo').value;
-  newTodo = newTodo.trim();
+  document.getElementById('new-todo').value = '';
 
+  newTodo = newTodo.trim();
   if (newTodo.length === 0) return;
 
   const todoList = document.getElementById('todo-list');
