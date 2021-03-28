@@ -19,3 +19,4 @@
 3. [Lab 03 - Flex y Media Queries](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio03)
 4. [Lab 04 - JavaScript](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio04)
 5. [Lab 05 - jQuery](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio05)
+6. [Lab 06 - Shopping List (jQuery)](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio06)
