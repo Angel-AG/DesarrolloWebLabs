@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-      Shopping List
-    </title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Shopping List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>
-        Shopping List
-      </h1>
-      <form>
-          <label>
-            Add an item
-          </label>
-          <input type="text" placeholder="e.g., broccoli" id="newText">
-          <button class="agregar" type="submit">
-            Add item
-          </button>
-      </form>
-      <ul class="Lista">
-      </ul>
+      <div class="row mb-5">
+        <div class="col-12">
+          <h1 class="display-2 mt-3 text-center">Shopping List</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form class="form-inline justify-content-center mb-4">
+            <div class="form-group">
+              <label class="mx-2" for="newText"> Add an item: </label>
+              <input class="form-control" type="text" placeholder="e.g., broccoli" id="newText" />
+            </div>
+            <button class="btn m-1" id="shop-add" type="button">Add item</button>
+          </form>
+          <ul id="shop-list"></ul>
+        </div>
+      </div>
     </div>
+    <!-- Template para shopping element -->
+    <template id="shop-el">
+      <li class="shop-item p-3 my-2">
+        <p class="lead pl-1"></p>
+        <button class="btn btn-success" type="button">Check</button>
+        <button class="btn btn-danger" type="button">Delete</button>
+      </li>
+    </template>
     <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script src="./js/index.js"></script>
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
