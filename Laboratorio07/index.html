@@ -11,13 +11,25 @@
     <div id="animal-buttons"></div>
 
     <form id="animal-form">
+      <!-- Prevent implicit submission of the form -->
+      <button type="submit" disabled style="display: none" aria-hidden="true"></button>
       <label for="animal-input">Add an animal or anything else you want</label>
-      <input type="text" id="animal-input" /><br />
-      <input id="add-animal" type="submit" value="Submit" />
+      <input type="text" id="animal-input" />
+      <button id="add-animal" type="button">Submit</button>
     </form>
 
     <div id="animals"></div>
-
+    <!-- Template para gif item -->
+    <template id="gif-item">
+      <div class="animal-item">
+        <img />
+        <h3></h3>
+      </div>
+    </template>
+    <!-- Template para boton -->
+    <template id="boton-tema">
+      <button type="button"></button>
+    </template>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
