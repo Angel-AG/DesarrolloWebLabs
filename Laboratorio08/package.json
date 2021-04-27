@@ -1,0 +1,23 @@
+{
+  "name": "laboratorio08",
+  "version": "1.0.0",
+  "description": "Laboratorio 08 de la clase de Desarrollo de Aplicaciones Web para practicar Node y Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio08"
+  },
+  "keywords": [
+    "Web",
+    "Node",
+    "Express"
+  ],
+  "author": "Angel Guevara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
