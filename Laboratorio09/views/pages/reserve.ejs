@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Reservation Page -->
+  <%- include('../template/head') -%>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <!-- Make your reservation -->
+        <%- include('../template/subtitle') -%>
+        <div class="text-center">
+          <a href="/tables">
+            <button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> View Tables</button>
+          </a>
+          <a href="/">
+            <button class="btn btn-lg btn-default">
+              <span class="fa fa-home"></span>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Reservation Page -->
+          <div class="card">
+            <div class="card-header">Table Reservation</div>
+            <div class="card-body">
+              <form action="/api/reserve" role="form" id="reserve-form">
+                <div class="form-group">
+                  <label for="reserve-name">Name</label>
+                  <input type="text" class="form-control" id="reserve-name" />
+                </div>
+                <div class="form-group">
+                  <label for="reserve-phone">Phone Number</label>
+                  <input type="text" class="form-control" id="reserve-phone" />
+                </div>
+                <div class="form-group">
+                  <label for="reserve-email">Email</label>
+                  <input type="text" class="form-control" id="reserve-email" />
+                </div>
+                <div class="form-group">
+                  <label for="reserve-unique-id">Unique ID</label>
+                  <input type="text" class="form-control" id="reserve-unique-id" />
+                </div>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%- include('../template/footer') -%>
+    </div>
+  </body>
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+  $('#reserve-form').submit((e) => {
+    e.preventDefault();
+
+    let newReservation = {
+      name: $('#reserve-name').val().trim(),
+      phone: $('#reserve-phone').val().trim(),
+      email: $('#reserve-email').val().trim(),
+      id: $('#reserve-unique-id').val().trim(),
+    };
+
+    $.post($('#reserve-form').attr('action'), newReservation).then((res) => {
+      if (res.success === true) {
+        alert('Your reservation has been registered!');
+      } else {
+        alert(`Error: ${res.error}`);
+      }
+    });
+  });
+</script>

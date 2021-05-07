@@ -22,3 +22,4 @@
 6. [Lab 06 - Shopping List (jQuery)](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio06)
 7. [Lab 07 - Giphy Animals (AJAX)](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio07)
 8. [Lab 08 - Express](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio08)
+9. [Lab 09 - Express + EJS](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio09)

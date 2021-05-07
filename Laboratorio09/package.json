@@ -1,0 +1,25 @@
+{
+  "name": "laboratorio09",
+  "version": "1.0.0",
+  "description": "Laboratorio 09 de la clase de Desarrollo de Aplicaciones Web para continuar practicando Node, Express y EJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio09"
+  },
+  "keywords": [
+    "Web",
+    "Node",
+    "Express",
+    "EJS"
+  ],
+  "author": "Angel Guevara",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

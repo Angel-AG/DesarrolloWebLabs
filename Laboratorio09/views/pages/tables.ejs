@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Tables Page -->
+  <%- include('../template/head') -%>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <!-- Current Reservations and Waiting List -->
+        <%- include('../template/subtitle') -%>
+        <div class="text-center">
+          <a href="/reserve"
+            ><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make Reservation</button></a
+          >
+          <a href="/"
+            ><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button
+          ></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Current Tables in Use -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Current Reservations</h3>
+            </div>
+            <div class="card-body">
+              <ul id="tableList" class="list-group">
+                <% let i = 1; for (let reservation of reservations) { %>
+                <li class="list-group-item my-2">
+                  <h4 class="item-title">Table #<%= i -%></h4>
+                  <hr />
+                  <h4>ID: <span class="customer-id"><%= reservation.id -%></span></h4>
+                  <h4>Name: <span class="customer-name"><%= reservation.name -%></span></h4>
+                  <h4>Email: <span class="customer-mail"><%= reservation.email -%></span></h4>
+                  <h4>Phone: <span class="customer-phone"><%= reservation.phone -%></span></h4>
+                </li>
+                <% i++} %>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Waiting List Card -->
+          <div class="card mt-4">
+            <div class="card-header">
+              <h3>Waiting List</h3>
+            </div>
+            <div class="card-body">
+              <ul id="waitList" class="list-group">
+                <% i = 1; for (let table of waitlist) { %>
+                <li class="list-group-item my-2">
+                  <h4 class="item-title">Next #<%= i -%></h4>
+                  <hr />
+                  <h4>ID: <span class="customer-id"><%= table.id -%></span></h4>
+                  <h4>Name: <span class="customer-name"><%= table.name -%></span></h4>
+                  <h4>Email: <span class="customer-mail"><%= table.email -%></span></h4>
+                  <h4>Phone: <span class="customer-phone"><%= table.phone -%></span></h4>
+                </li>
+                <% i++;} %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%- include('../template/footer') -%>
+    </div>
+  </body>
+
+  <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS LOADED FROM OUR SERVER -->
+  <script type="text/javascript">
+    // Clear all
+    $('#clear').on('click', () => {
+      $.post('/api/clear').then(() => {
+        $('#tableList').empty();
+        $('#waitList').empty();
+      });
+    });
+  </script>
+</html>
