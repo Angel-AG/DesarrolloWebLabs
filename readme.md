@@ -23,3 +23,4 @@
 7. [Lab 07 - Giphy Animals (AJAX)](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio07)
 8. [Lab 08 - Express](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio08)
 9. [Lab 09 - Express + EJS](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio09)
+10. [Lab 10 - MongoDB](https://github.com/Angel-AG/DesarrolloWebLabs/tree/main/Laboratorio10)
